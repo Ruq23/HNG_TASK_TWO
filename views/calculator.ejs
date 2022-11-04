@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="/" method="POST">
+        <div>
+        <label for="x">First Value</label>
+        <input type="number" name="xinput" id="xinput">
+    </div>
+    <div>
+        <label for="operation_type">Select an Operation</label>
+        <select name="operation_type" id="operation_type">
+            <% for(let operation of operation_type) { %> 
+                <option value="<%=operation%>"><%=operation%></option>
+            <% } %> 
+            <!-- <option value="android">android</option>
+            <option value="ios">ios</option>
+            <option value="windows">windows</option> -->
+        </select>
+    </div>
+    <div>
+        <label for="y">Second Value</label>
+        <input type="number" name="yinput" id="yinput">
+    </div>
+    <button>Solve</button>
+    </form>
+</body>
+</html>
